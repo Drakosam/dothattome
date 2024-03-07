@@ -1,7 +1,8 @@
 package main
 
 import (
-	"cli/reqests"
+	"dothattome/reqests"
+	"dothattome/server"
 	"fmt"
 	"os"
 )
@@ -21,6 +22,13 @@ func main() {
 			reqests.CallTestGet()
 			break
 
+		case "start":
+			server.StartServer()
+			break
+
+		case "kill":
+			reqests.CallKillServer()
+			break
 		case "xxx":
 			fmt.Println("jest xxx")
 			break
